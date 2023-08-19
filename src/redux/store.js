@@ -1,14 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import metricsReducer from "./reducers/metricsReducer";
-// Import other reducers here
-
-const rootReducer = combineReducers({
-  metrics: metricsReducer,
-  // Other reducers here
-});
+import financialDataReducer from "./reducers/financialDataSlice"; // Update the path as needed
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    financialData: financialDataReducer,
+    // Add other reducers here if needed
+  },
 });
 
 export default store;

@@ -3,9 +3,15 @@ import axios from "axios";
 
 export const fetchFinancialData = createAsyncThunk(
   "financialData/fetchFinancialData",
-  async () => {
-    const response = await axios.get("/api/financial-data");
-    return response.data;
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(
+        `/api/v3/financial-statement-symbol-lists?apikey=${process.env.REACT_APP_API_KEY}`
+      );
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data);
+    }
   }
 );
 
@@ -27,10 +33,10 @@ const financialDataSlice = createSlice({
     },
     [fetchFinancialData.rejected]: (state, action) => {
       state.status = "failed";
-      state.error = action.error.message;
+      state.error = action.payload;
     },
   },
 });
 
 export const financialDataReducer = financialDataSlice.reducer;
-export const {} = financialDataSlice.actions;
+export default financialDataSlice.actions;
