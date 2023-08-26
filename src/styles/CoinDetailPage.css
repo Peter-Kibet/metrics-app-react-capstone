@@ -41,6 +41,5 @@
   border: 1px solid black;
   box-shadow: 0 0 5px rgba(255, 254, 254, 0.5);
   border-radius: 20px;
-  width: 100%;
-  gap: 0.5em;
+  width: 50%;
 }
