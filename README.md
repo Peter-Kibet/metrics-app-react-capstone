@@ -63,7 +63,7 @@ This project was built using these technologies.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://example.com)
+- [Live Demo Link](https://vercel.com/peterjkibet-gmailcom/metrics-app-react-capstone/5xXaNvHbmVA2mDHNjr9vm6dzgnEb)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
