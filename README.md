@@ -63,7 +63,7 @@ This project was built using these technologies.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://vercel.com/peterjkibet-gmailcom/metrics-app-react-capstone/5xXaNvHbmVA2mDHNjr9vm6dzgnEb)
+- [Live Demo Link](https://splendid-churros-4f2e1c.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
