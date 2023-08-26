@@ -1,5 +1,6 @@
 module.exports = {
+  preset: 'react-scripts',
   transform: {
-    "^.+\\.jsx?$": "babel-jest", // Transform .js and .jsx files using Babel
+    '^.+\\.jsx?$': 'babel-jest',
   },
 };
