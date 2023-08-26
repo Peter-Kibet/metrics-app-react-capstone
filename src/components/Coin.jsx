@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Coin.css';
 
 const CoinComponent = ({ name, image, price }) => (
   <div className="coin">
