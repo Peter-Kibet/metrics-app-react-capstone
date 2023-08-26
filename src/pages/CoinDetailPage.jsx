@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchSingleCoinAction } from '../redux/slices/singleCoinSlice';
+import '../styles/CoinDetailPage.css';
 
 const CoinDetailPage = () => {
   const { coinId } = useParams();
@@ -28,7 +29,7 @@ const CoinDetailPage = () => {
           </h3>
         </div>
       </div>
-      <div className="section-header">
+      <div className="details-header">
         <h1>
           Explore
           {coinData.name}
@@ -43,59 +44,58 @@ const CoinDetailPage = () => {
           below👇🏾
         </p>
       </div>
-      <div className="details-info">
-        <div className="coin-details">
-          <div className="coin-det">
-            <h3>Market Cap Rank</h3>
-            <p>{coinData.market_cap_rank}</p>
-          </div>
-          <div className="coin-det">
-            <h3>Market Cap</h3>
-            <p>
-              $
-              {coinData.market_cap}
-            </p>
-          </div>
-          <div className="coin-det">
-            <h3>24h High</h3>
-            <p>
-              $
-              {coinData.high_24h}
-            </p>
-          </div>
-          <div className="coin-det">
-            <h3>24h Low</h3>
-            <p>
-              $
-              {coinData.low_24h}
-            </p>
-          </div>
-          <div className="coin-det">
-            <h3>Price Change 24h</h3>
-            <p>
-              $
-              {coinData.price_change}
-            </p>
-          </div>
-          <div className="coin-det">
-            <h3>Market Cap Change</h3>
-            <p>
-              $
-              {coinData.market_cap_change}
-            </p>
-          </div>
-          <div className="coin-det">
-            <h3>Total Supply</h3>
-            <p>{coinData.total_supply}</p>
-          </div>
-          <div className="coin-det">
-            <h3>Max Supply</h3>
-            <p>{coinData.max_supply}</p>
-          </div>
-          <div className="coin-det">
-            <h3>Circulating Supply</h3>
-            <p>{coinData.circulating_supply}</p>
-          </div>
+
+      <div className="coin-details">
+        <div className="singleCoinDetails">
+          <h3>Market Cap Rank</h3>
+          <p>{coinData.market_cap_rank}</p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>Market Cap</h3>
+          <p>
+            $
+            {coinData.market_cap}
+          </p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>24h High</h3>
+          <p>
+            $
+            {coinData.high_24h}
+          </p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>24h Low</h3>
+          <p>
+            $
+            {coinData.low_24h}
+          </p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>Price Change 24h</h3>
+          <p>
+            $
+            {coinData.price_change}
+          </p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>Market Cap Change</h3>
+          <p>
+            $
+            {coinData.market_cap_change}
+          </p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>Total Supply</h3>
+          <p>{coinData.total_supply}</p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>Max Supply</h3>
+          <p>{coinData.max_supply}</p>
+        </div>
+        <div className="singleCoinDetails">
+          <h3>Circulating Supply</h3>
+          <p>{coinData.circulating_supply}</p>
         </div>
       </div>
     </div>
