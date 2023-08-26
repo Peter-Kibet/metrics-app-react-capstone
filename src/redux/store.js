@@ -1,11 +1,19 @@
-import { configureStore } from "@reduxjs/toolkit";
-import financialDataReducer from "./reducers/financialDataSlice"; // Update the path as needed
+import { configureStore } from '@reduxjs/toolkit';
+import coinsReducer, { fetchCoinsAction } from './slices/coinSlice';
+import globalReducer, { fetchGlobalDataAction } from './slices/globalSlice';
+import singleCoinReducer, {
+  fetchSingleCoinAction,
+} from './slices/singleCoinSlice';
 
 const store = configureStore({
   reducer: {
-    financialData: financialDataReducer,
-    // Add other reducers here if needed
+    coins: coinsReducer,
+    global: globalReducer,
+    singleCoin: singleCoinReducer,
   },
 });
+
+store.dispatch(fetchCoinsAction());
+store.dispatch(fetchGlobalDataAction());
 
 export default store;
