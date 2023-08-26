@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCoinsAction } from '../redux/slices/coinSlice';
-import GlobalComponent from '../components/Global';
+
 import CoinComponent from '../components/Coin';
+import '../styles/HomePage.css';
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -23,20 +24,20 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <div className="search-bar">
+      <div className="searchBar">
         <input
           className="search"
           type="text"
-          placeholder="Search for Cryptocurrency"
+          placeholder="Search for Crypto Coin"
           onChange={handleChange}
         />
       </div>
-      <GlobalComponent />
-      <div className="section-header">
+
+      <div className="header-section">
         <h1>Discover the World of Cryptocurrencies</h1>
         <p>Explore the latest trends, prices, and market insights</p>
       </div>
-      <div className="coin-container">
+      <div className="coinContainer">
         {filteredCoins.map((coin) => (
           <Link className="coin-link" to={`/details/${coin.id}`} key={coin.id}>
             <CoinComponent
@@ -44,6 +45,7 @@ const HomePage = () => {
               name={coin.name}
               image={coin.image}
               price={coin.current_price}
+              symbol={coin.symbol}
             />
           </Link>
         ))}
