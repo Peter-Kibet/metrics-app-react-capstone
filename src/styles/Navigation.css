@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #ec4c8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+nav h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.back-button {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #e98caf;
+}
