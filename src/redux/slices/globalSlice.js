@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchGlobalData } from '../../services/globalData'; // Import the service function
+import fetchGlobalData from '../../services/globalData'; // Import the service function
 
 export const fetchGlobalDataAction = createAsyncThunk(
   'global/fetchGlobalData',

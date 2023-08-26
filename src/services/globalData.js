@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_URL = 'https://api.example.com'; // Replace with your API URL
 
-export const fetchGlobalData = async () => {
+const fetchGlobalData = async () => {
   try {
     const response = await axios.get(`${API_URL}/global`);
     return response.data;
@@ -12,3 +12,5 @@ export const fetchGlobalData = async () => {
     throw error;
   }
 };
+
+export default fetchGlobalData;

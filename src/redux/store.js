@@ -1,9 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import coinsReducer, { fetchCoinsAction } from './slices/coinSlice';
 import globalReducer, { fetchGlobalDataAction } from './slices/globalSlice';
-import singleCoinReducer, {
-  fetchSingleCoinAction,
-} from './slices/singleCoinSlice';
+import singleCoinReducer from './slices/singleCoinSlice';
 
 const store = configureStore({
   reducer: {
