@@ -65,6 +65,12 @@ This project was built using these technologies.
 
 - [Live Demo Link](https://splendid-churros-4f2e1c.netlify.app/)
 
+## Video Link <a name="live-demo"></a>
+
+--sorry the video is not too good, I had a very rough week and personal stuff caught up with me I am fixing my project on a bus and I have less power and unstable internert, so kindly help me out. I will be very grateful. Thank you.
+
+https://drive.google.com/file/d/11x27LklaCr0u3tPisBC1Tbj1Evv5V30b/view?usp=sharing
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
