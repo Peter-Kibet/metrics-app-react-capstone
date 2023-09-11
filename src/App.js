@@ -1,14 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Use Routes
+import HomePage from './pages/HomePage';
+import CoinDetailPage from './pages/CoinDetailPage';
+import Navigation from './components/Navigation';
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
-  );
-}
+const App = () => (
+  <Router>
+    <Navigation />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/details/:coinId" element={<CoinDetailPage />} />
+    </Routes>
+  </Router>
+);
 
 export default App;

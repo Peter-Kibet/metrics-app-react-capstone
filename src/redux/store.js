@@ -1,14 +1,14 @@
-import { configureStore } from "@reduxjs/toolkit";
-import metricsReducer from "./reducers/metricsReducer";
-// Import other reducers here
-
-const rootReducer = combineReducers({
-  metrics: metricsReducer,
-  // Other reducers here
-});
+import { configureStore } from '@reduxjs/toolkit';
+import coinsReducer, { fetchCoinsAction } from './slices/coinSlice';
+import singleCoinReducer from './slices/singleCoinSlice';
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    coins: coinsReducer,
+    singleCoin: singleCoinReducer,
+  },
 });
+
+store.dispatch(fetchCoinsAction());
 
 export default store;
